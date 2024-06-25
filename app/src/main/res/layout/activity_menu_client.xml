@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo2"
+    android:onClick="clickShowConfiguracionUser"
+    tools:context=".MenuClientActivity">
+
+    <TextView
+        android:id="@+id/textView_titleSessionAcount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:text="@string/textview_MenuCliente"
+        android:textSize="34sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:clickable="false"/>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginTop="100dp"
+        android:clickable="false"/>
+
+    <TextView
+        android:id="@+id/textViewModifyAcount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:clickable="true"
+        android:text="@string/textview_editAcount"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewCerrarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="450dp"
+        android:onClick="clickCerrarSession"
+        android:text="@string/textview_cerrarAcount"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:clickable="false">
+
+        <!-- Iconos para menú, perfil y carrito de compras (sustituir con tus propios iconos) -->
+        <ImageView
+            android:id="@+id/imageViewShopping"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_weight="1"
+            android:contentDescription="Productos"
+            android:padding="16dp"
+            android:src="@drawable/products" />
+
+        <ImageView
+            android:id="@+id/imageViewProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="Perfil"
+            android:onClick="clickShowConfiguracionUser"
+            android:padding="16dp"
+            android:src="@drawable/edit_user" />
+
+        <ImageView
+            android:id="@+id/imageViewCart"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="Carrito de compras"
+            android:padding="16dp"
+            android:src="@drawable/shopping" />
+
+        <ImageView
+            android:id="@+id/imageViewPurchases"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_weight="1"
+            android:contentDescription="Compras Realizadas"
+            android:padding="16dp"
+            android:src="@drawable/purchases_made" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

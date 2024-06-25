@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">ProyectoMovil</string>
+    <string name="editText_correo">Correo Electronico</string>
+    <string name="editText_password">Contraseña</string>
+    <string name="textView_Login">Iniciar Sesión</string>
+    <string name="buttonLogin">Iniciar Sesión</string>
+    <string name="textView_Message1">Aun no tiene cuenta?</string>
+    <string name="textView_Message2">Crear cuenta</string>
+    <string name="editText_Username">Ingrese su nombre de Usuario</string>
+    <string name="editText_Email">Ingrese su correo electronico</string>
+    <string name="editText_PasswordAcount">Ingrese su contraseña</string>
+    <string name="textViewMenuPrincipal">Menu Principal</string>
+    <string name="buttonCreatePeople">Crear Usuarios</string>
+    <string name="buttonWatchProducts">Mirar Productos</string>
+    <string name="editText_LastName">Ingrese su apellido</string>
+    <string name="editText_FirstName">Ingrese su nombre</string>
+    <string name="editText_Cedula">Ingrese su cedula</string>
+    <string name="editText_ConfirmPassword">Confirme su contraseña</string>
+    <string name="editText_Direccion">Ingrese su dirección</string>
+    <string name="title_activity_user_session">UserSessionActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="imageView_description_search">Buscar</string>
+
+    <string name="textview_MenuCliente">Ajustes de Cuenta</string>
+    <string name="textview_editAcount">Editar Cuenta</string>
+    <string name="textview_cerrarAcount">Cerrar Sesión</string>
+    <string name="editText_hint_search">Buscar productos por nombre</string>
+    <string name="text_button_addProduct">Buscar productos por nombre</string>
+    <string name="hint_quantity_order">Cantidad del producto a comprar</string>
+
+</resources>

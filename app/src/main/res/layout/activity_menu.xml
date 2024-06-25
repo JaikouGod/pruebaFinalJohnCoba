@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo2"
+    tools:context=".ui.MenuActivity">
+
+    <!-- ProgressBar para indicar carga -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:visibility="gone"
+        style="@style/WhiteProgressBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Texto de "Cargando..." -->
+    <TextView
+        android:id="@+id/loadingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Cargando..."
+        android:textColor="@android:color/white"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/progressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- EditText para ingresar texto de búsqueda -->
+    <EditText
+        android:id="@+id/editTextSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:autofillHints=""
+        android:hint="@string/editText_hint_search"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:padding="8dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@id/imageViewSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <!-- ImageView como botón de búsqueda -->
+    <ImageView
+        android:id="@+id/imageViewSearch"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:contentDescription="@string/imageView_description_search"
+        android:focusable="true"
+        android:onClick="onSearchImageClick"
+        android:src="@drawable/search"
+        app:layout_constraintBottom_toBottomOf="@id/editTextSearch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/editTextSearch" />
+
+    <!-- RecyclerView para mostrar productos -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewProducts"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/editTextSearch"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/item_product" />
+
+    <!-- Franja horizontal para iconos -->
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Iconos para menú, perfil y carrito de compras (sustituir con tus propios iconos) -->
+        <ImageView
+            android:id="@+id/imageViewShopping"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_weight="1"
+            android:contentDescription="Productos"
+            android:onClick="onShoppingImageClick"
+            android:padding="16dp"
+            android:src="@drawable/products" />
+
+        <ImageView
+            android:id="@+id/imageViewProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="Perfil"
+            android:onClick="clickShowConfiguracionUser"
+            android:padding="16dp"
+            android:src="@drawable/edit_user" />
+
+        <ImageView
+            android:id="@+id/imageViewCart"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="Carrito de compras"
+            android:onClick="onCartImageClick"
+            android:padding="16dp"
+            android:src="@drawable/shopping" />
+
+        <ImageView
+            android:id="@+id/imageViewPurchases"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_weight="1"
+            android:contentDescription="Compras Realizadas"
+            android:onClick="clickShowFactura"
+            android:padding="16dp"
+            android:src="@drawable/purchases_made" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

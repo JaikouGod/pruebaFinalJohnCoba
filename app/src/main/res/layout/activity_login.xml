@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondo"
+    tools:context=".ui.LoginActivity">
+
+    <TextView
+        android:id="@+id/textViewLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/textView_Login"
+        android:textAlignment="center"
+        android:textColor="#B5A943"
+        android:textColorHint="#CDC048"
+        android:textSize="34sp"
+        tools:ignore="MissingConstraints" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="120dp"
+        app:srcCompat="@drawable/loginlogo" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/editText_correo"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:paddingTop="15dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextTextPasswordLogin"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/editText_password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonIngresar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="#A39E4D"
+        android:onClick="login"
+
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:text="@string/buttonLogin"
+        tools:ignore="MissingConstraints,DuplicateSpeakableTextCheck" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="@string/textView_Message1"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/textView_Message2"
+        android:minHeight="48dp"
+        android:onClick="createAcount"
+        android:text="@string/textView_Message2"
+        android:textAlignment="center"
+        android:textColor="#B5A943"
+        tools:ignore="MissingConstraints" />
+
+
+</LinearLayout>

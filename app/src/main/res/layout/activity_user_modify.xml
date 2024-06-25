@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/material_dynamic_neutral70"
+    android:orientation="vertical"
+    tools:context=".ui.UserModifyActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="120dp"
+        app:srcCompat="@drawable/loginlogo" />
+
+    <EditText
+        android:id="@+id/editTextCedulaUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text="Name"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/editTextNameUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text="Name"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/editTextLastNameUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text="Name"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/editTextDirecionUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text="Name"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/editTextEmailUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text="Name"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/editTextTelefonoUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:hint="Telefono"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/white"
+        android:textColorHint="@color/white" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="#A39E4D"
+        android:onClick="clickUpdateClient"
+        android:text="Actualizar" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+
+        android:backgroundTint="#F60202"
+        android:onClick="clickBack"
+        android:text="Cancelar" />
+
+
+</LinearLayout>

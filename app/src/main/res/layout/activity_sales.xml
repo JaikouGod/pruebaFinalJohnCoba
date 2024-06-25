@@ -1,0 +1,121 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo2"
+    tools:context=".ui.SalesActivity">
+
+    <!-- ViewPager2 para las imágenes del producto -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerImages"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/productDetailsLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.5" />
+
+
+    <!-- ProgressBar para indicar carga -->
+    <ProgressBar
+        android:id="@+id/progressBarSales"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:visibility="gone"
+        style="@style/WhiteProgressBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Texto de "Cargando..." -->
+    <TextView
+        android:id="@+id/loadingTextSales"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Cargando..."
+        android:textColor="@android:color/white"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/progressBarSales"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Layout para los detalles del producto -->
+    <LinearLayout
+        android:id="@+id/productDetailsLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/viewPagerImages"
+        app:layout_constraintBottom_toTopOf="@id/addToCartContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.25">
+
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre del Producto"
+            android:textSize="25sp"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/productPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Precio: $0.00"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/productStock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stock: Disponible"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"/>
+    </LinearLayout>
+
+    <!-- Contenedor para el EditText y el Botón -->
+    <LinearLayout
+        android:id="@+id/addToCartContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/editTextQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/hint_quantity_order"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white" />
+
+        <Button
+            android:id="@+id/addToCartButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:onClick="addToCart"
+            android:text="Añadir al Carro de Compras" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

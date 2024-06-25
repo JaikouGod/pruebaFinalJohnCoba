@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "895840865278",
+    "firebase_url": "https://facturacion-app-5ae81-default-rtdb.firebaseio.com",
+    "project_id": "facturacion-app-5ae81",
+    "storage_bucket": "facturacion-app-5ae81.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895840865278:android:c8009deb8f867761758eaf",
+        "android_client_info": {
+          "package_name": "fisei.uta.proyectomovil"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxLminP6N2aLEH6X7_c8j5j4Vf5NYdAGk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
