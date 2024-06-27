@@ -106,5 +106,18 @@
         android:textColor="#B5A943"
         tools:ignore="MissingConstraints" />
 
+    <TextView
+        android:id="@+id/textViewActualizarEstado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/textView_Message2"
+        android:minHeight="48dp"
+        android:onClick="clickActivarAccount"
+        android:text="Activar Cuenta"
+        android:textAlignment="center"
+        android:textColor="#B5A943"
+        tools:ignore="MissingConstraints" />
+
+
 
 </LinearLayout>

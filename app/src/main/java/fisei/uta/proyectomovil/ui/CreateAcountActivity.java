@@ -36,7 +36,7 @@ import fisei.uta.proyectomovil.R;
 public class CreateAcountActivity extends AppCompatActivity {
     private EditText edittext_cedula, edittext_name, edittext_lastname, edittext_direccion,
             edittext_email,edittext_password,edittext_confirpassword;
-    private String dominio="facturajohn";
+    private String dominio="192.168.171.196";
     private RequestQueue queue;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +64,7 @@ public class CreateAcountActivity extends AppCompatActivity {
         edittext_confirpassword=findViewById(R.id.editTextConfirPassword);
     }
     public void createOnServer(String cedula,String name,String lastname,String password,String direccion,String email){
-        String urlPost = "http://"+dominio+".somee.com/api/Usuarios/CrearUsuario/";
+        String urlPost = "http://"+dominio+"/api/Usuarios/CrearUsuario/";
         JSONObject postParamters = new JSONObject();
         try {
 
@@ -83,11 +83,13 @@ public class CreateAcountActivity extends AppCompatActivity {
             @Override
             public void onResponse(JSONObject jsonObject) {
                 Toast.makeText(CreateAcountActivity.this, "Respuesta: " + jsonObject.toString(), Toast.LENGTH_LONG).show();
+
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Toast.makeText(CreateAcountActivity.this, "Error: " + error.toString(), Toast.LENGTH_LONG).show();
+
             }
         });
         queue.add(jsonObjectRequest);

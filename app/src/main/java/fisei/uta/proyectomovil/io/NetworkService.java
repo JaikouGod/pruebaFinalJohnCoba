@@ -31,14 +31,14 @@ import fisei.uta.proyectomovil.model.Orden;
 
 public class NetworkService {
     private RequestQueue queue;
-    private String dominio="facturajohn";
+    private String dominio="192.168.171.196";
 
     public NetworkService(Context context) {
         queue = Volley.newRequestQueue(context);
     }
 
     public void getProducts(final Response.Listener<List<Products>> onSuccess, final Response.ErrorListener onError) {
-        String url = "http://"+dominio+".somee.com/api/Productos/ListaProductosConUImg";
+        String url = "http://"+dominio+"/api/Productos/ListaProductosConUImg";
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
@@ -69,7 +69,7 @@ public class NetworkService {
     }
 
     public void getProductsForName(String name, final Response.Listener<List<Products>> onSuccess, final Response.ErrorListener onError) {
-        String url = "http://"+dominio+".somee.com/api/Productos/DevolverProductosxNombre"  + name;
+        String url = "http://"+dominio+"/api/Productos/DevolverProductosxNombre"  + name;
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
@@ -101,7 +101,7 @@ public class NetworkService {
 
     // Método para obtener el producto por ID
     public void getProductsForID(int codeProduct, final Response.Listener<Products> onSuccess, final Response.ErrorListener onError) {
-        String url = "http://"+dominio+".somee.com/api/Productos/DevolverProductoxID" + String.valueOf(codeProduct);
+        String url = "http://"+dominio+"/api/Productos/DevolverProductoxID" + String.valueOf(codeProduct);
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
@@ -149,7 +149,7 @@ public class NetworkService {
     public void createOrder(int clienteID, double totalVenta, List<DetalleOrden> detalleOrdenList,
                             final Response.Listener<Integer> onSuccess,
                             final Response.ErrorListener onError) {
-        String url = "http://"+dominio+".somee.com/api/OrdenVentas/GuardarOrdenVenta/";
+        String url = "http://"+dominio+"/api/OrdenVentas/GuardarOrdenVenta/";
 
         // Obtener la fecha actual en formato ISO 8601
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.getDefault());

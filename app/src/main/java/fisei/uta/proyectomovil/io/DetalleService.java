@@ -26,11 +26,11 @@ import java.util.List;
 
 public class DetalleService {
     private RequestQueue queue;
-    private String dominio="facturajohn";
+    private String dominio="192.168.171.196";
     public DetalleService(Context context){queue= Volley.newRequestQueue(context);}
 
     public void getDetalleFactural(Context context,String idFactura,final DetalleService.FacturaDetalleResponseListener listener) {
-        String url = "http://"+dominio+".somee.com/api/DetalleOrdenes/ListaDetallesOrdenVentaPorOV";
+        String url = "http://"+dominio+"/api/DetalleOrdenes/ListaDetallesOrdenVentaPorOV";
         JsonObjectRequest request = new JsonObjectRequest (Request.Method.GET, url+idFactura, null,
                 new Response.Listener<JSONObject>() {
                     @Override

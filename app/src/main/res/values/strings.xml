@@ -34,5 +34,6 @@
     <string name="editText_hint_search">Buscar productos por nombre</string>
     <string name="text_button_addProduct">Buscar productos por nombre</string>
     <string name="hint_quantity_order">Cantidad del producto a comprar</string>
-
+    <string name="textview_Activar">Activar Usuario</string>
+    <string name="buton_Activar">Activar</string>
 </resources>

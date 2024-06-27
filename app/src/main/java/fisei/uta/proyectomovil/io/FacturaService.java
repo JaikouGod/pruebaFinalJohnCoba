@@ -29,13 +29,13 @@ import java.util.List;
 
 public class FacturaService {
     private RequestQueue queue;
-    private String dominio="facturajohn";
+    private String dominio="192.168.171.196";
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
     FirebaseUser user = mAuth.getCurrentUser();
     public FacturaService(Context context){queue= Volley.newRequestQueue(context);}
 
     public void getFacturaForEmail(Context context, final FacturaService.FacturaResponseListener listener) {
-        String url = "http://"+dominio+".somee.com/api/OrdenVentas/ObtenerOrdenesVentasxUserEmail";
+        String url = "http://"+dominio+"/api/OrdenVentas/ObtenerOrdenesVentasxUserEmail";
         String userEmail = user.getEmail();
         String encodedEmail = userEmail.replace("@", "%40");
         JsonObjectRequest   request = new JsonObjectRequest (Request.Method.GET, url+encodedEmail, null,
